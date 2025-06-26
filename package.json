@@ -1,0 +1,19 @@
+{
+  "name": "npr-cypress-tests",
+  "version": "1.0.0",
+  "description": "Automated Cypress tests for NPR.org homepage and donation flows",
+  "author": "Indira",
+  "license": "ISC",
+  "scripts": {
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run"
+  },
+  "devDependencies": {
+    "cypress": "^14.4.1",
+    "cypress-iframe": "^1.0.1",
+    "cypress-real-events": "^1.14.0"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^9.8.0"
+  }
+}

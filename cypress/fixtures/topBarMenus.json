@@ -1,0 +1,42 @@
+{
+    "menuItems": [
+      "News",
+      "Culture",
+      "Music",
+      "Podcasts & Shows",
+      "Search"
+    ],
+    
+    "dropdownMenus": {
+      "News": {
+        "className": "menu__item--news",
+        "submenuClass": "submenu--news",
+        "items": ["National", "World", "Politics", "Business", "Health", "Science", "Climate", "Race"]
+      },
+      "Culture": {
+        "className": "menu__item--culture",
+        "submenuClass": "submenu--culture",
+        "items": ["Books", "Movies", "Television", "Pop Culture", "Food", "Art & Design", "Performing Arts", "Life Kit", "Gaming"]
+      },
+      "Music": {
+        "className": "menu__item--music",
+        "submenuClass": "submenu--music",
+        "items": ["All Songs Considered", "Tiny Desk", "New Music Friday", "Music Features", "Live Sessions"]
+      },
+      "Podcasts & Shows": {
+        "className": "menu__item--shows-podcasts",
+        "submenuClass": "submenu--shows-podcasts",
+        "categories": {
+          "Daily": {
+            "categoryClass": "submenu__category--daily",
+            "items": ["All Things Considered", "Fresh Air", "Up First"]
+          },
+          "Featured": {
+            "categoryClass": "submenu__category--featured",
+            "items": ["Embedded", "The NPR Politics Podcast", "Throughline", "Trump's Terms"]
+          }
+        }
+      }
+    }
+  }
+  
