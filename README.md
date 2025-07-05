@@ -1,9 +1,10 @@
-
 <div align="center">
   <h1>NPR Cypress Tests</h1>
 </div>
 
 This project contains automated end-to-end tests for key user flows on [NPR.org](https://www.npr.org), built using [Cypress](https://www.cypress.io/).
+
+---
 
 ## 📋 Covered Scenarios
 
@@ -11,7 +12,7 @@ This project contains automated end-to-end tests for key user flows on [NPR.org]
 - Switching between **Donate to NPR** and **Local Station**
 - Switching between **Monthly** and **One-time** and validating amount options
 - Filling out the donation form with randomly generated data (via `@faker-js/faker`)
-- Handling Stripe iframe fields *(in progress)*
+- Handling Stripe iframe fields 
 
 ### ✅ Homepage Menu
 - Verifying visibility of main top bar menu items: News, Culture, Music, Podcasts & Shows
@@ -45,6 +46,7 @@ npm run cypress:run
 
 - `chromeWebSecurity: false` is set in `cypress.config.js` to allow Cypress to interact with Stripe iframe fields and handle cross-origin limitations.
 - In `support/e2e.js`, uncaught frontend exceptions (like `ReportAdPopup` errors from ads) are caught and logged to avoid false test failures while working with a public production site.
+- Test data like donation amounts and menu items are stored in the `cypress/fixtures` folder for better maintainability and reuse across test files.
 
 ---
 
@@ -59,12 +61,17 @@ npr-cypress-tests/
 │   │   │   └── donationFlow.cy.js
 │   │   ├── homepage/
 │   │   │   └── topBarMenu_search.cy.js
+│   ├── fixtures/
+│   │   ├── donationAmounts.json
+│   │   ├── donationOptions.json
+│   │   └── topBarMenus.json
 │   └── support/
 │       ├── e2e.js
 │       └── commands.js
 │
 ├── cypress.config.js
 ├── package.json
+├── package-lock.json
 └── README.md
 ```
 
@@ -73,4 +80,4 @@ npr-cypress-tests/
 ## 🙋‍♀️ Author
 
 **Indira Biyakhmetova**  
-Quality Assurance Engineer — Manual & Automation  
+Quality Assurance Engineer — Manual & Automation
